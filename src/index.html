@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Usuarios y Órdenes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestión de Usuarios</h1>
+
+    <!-- Formulario para agregar o actualizar usuarios -->
+    <form id="userForm">
+      <input type="hidden" id="userId" />
+      <input type="text" id="userName" placeholder="Nombre" required />
+      <input type="email" id="userEmail" placeholder="Correo" required />
+      <input type="tel" id="userPhone" placeholder="Teléfono" required />
+      <input type="text" id="userAddress" placeholder="Dirección" required />
+      <button type="submit" id="submitUser">Agregar Usuario</button>
+    </form>
+
+    <!-- Tabla de usuarios -->
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>ID</th> <!-- Añadir encabezado ID -->
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Los usuarios se cargarán dinámicamente aquí -->
+      </tbody>
+    </table>
+    
+
+    <h1>Gestión de Órdenes</h1>
+
+    <!-- Similar para Órdenes -->
+    <form id="orderForm">
+      <input type="hidden" id="orderId" />
+      <input type="text" id="orderUser" placeholder="ID de Usuario" required />
+      <input type="text" id="orderProduct" placeholder="Producto" required />
+      <input type="number" id="orderQuantity" placeholder="Cantidad" required />
+      <input type="number" id="orderTotal" placeholder="Total" required />
+      <input type="date" id="orderDate" required />
+      <button type="submit" id="submitOrder">Agregar Orden</button>
+    </form>
+
+    <!-- Tabla de Órdenes -->
+    <table id="orderTable">
+      <thead>
+        <tr>
+          <th>ID Usuario</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+          <th>Fecha Entrega</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Las órdenes se cargarán dinámicamente aquí -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
